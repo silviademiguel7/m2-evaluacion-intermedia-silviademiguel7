@@ -1,0 +1,43 @@
+.page{
+    text-align: center;
+    background-color: grey;
+    color: black;
+    min-height: 100vh;
+    padding: 30px;
+    
+}
+.tries{
+    color: red;
+    font-size: 28px;
+    font-weight: 700;
+    position: absolute;
+    right: 50px;
+    top: 60px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.title{
+    margin-bottom: 30px;
+}
+.subtitle{
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+.contain{
+    margin-bottom: 30px;
+    height: 20px;
+}
+.btn{
+    width: 200px;
+    margin-bottom: 30px;
+}
+.pista{
+    color: blue;
+    border: 2px blue solid;
+    padding: 5px;
+}
