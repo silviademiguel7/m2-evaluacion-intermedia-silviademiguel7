@@ -13,8 +13,9 @@ function getRandomNumber(max) {
 
 // Anda, chacho, píntame en la consola un número random hasta 100;
 const myRandomNumber = getRandomNumber(100);
-
 console.log(`Mi número aleatorio es ${myRandomNumber}`);
+
+//Funcion principal
 function checkNumber() {
     // Recoger el valor del input
     const input = parseInt(containNumber.value);
