@@ -24,27 +24,34 @@ function checkNumber() {
     //Comprobar que el contenido del input no este vacio
     if (containNumber.value.length === 0) {
         console.log('inputvaluelength', containNumber.value.length);
-        pistaContainer.innerHTML = 'Debes introducir un numero';
+        pistaContainer.innerHTML = 'Debes introducir un numero entre 0 y 100';
     } else {
         console.log('El numero introducido es ', input);
         // Comprobar si el input es mayor que myRandomNumber
         if (input > myRandomNumber) {
             //Escribir en pista 
-            console.log(pistaContainer.innerHTML = 'Demasiado alto');
+            if (input > 100) {
+                pistaContainer.innerHTML = 'El numero no puede ser mayor que 100';
+            } else {
+                console.log(pistaContainer.innerHTML = 'Demasiado alto');
 
-            tries.innerHTML = numberTries;
-            //Sumar contador
-            numberTries = numberTries + 1;
-            //Escribir en tries el valor contador
+                tries.innerHTML = numberTries;
+                //Sumar contador
+                numberTries = numberTries + 1;
+                //Escribir en tries el valor contador
+            }
 
         } //Comprobar si el input es menor que myRandomNumber
         else if (input < myRandomNumber) {
-            //Escribir en pista 
-            pistaContainer.innerHTML = 'Demasiado bajo';
-            //Escribir en tries el valor contador
-            tries.innerHTML = numberTries;
-            //Sumar contador
-            numberTries = numberTries + 1;
+            if(input < 0){
+                pistaContainer.innerHTML = 'El numero no puede ser menor que 0';
+            }else{//Escribir en pista 
+                pistaContainer.innerHTML = 'Demasiado bajo';
+                //Escribir en tries el valor contador
+                tries.innerHTML = numberTries;
+                //Sumar contador
+                numberTries = numberTries + 1;}
+            
         } else {
             //Escribir en pista 
             pistaContainer.innerHTML = '¡HAS GANADO, CAMPEONA!';
